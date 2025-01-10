@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pet Finder</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
     <header>
@@ -14,24 +15,30 @@
     <main>
         <section id="gallery">
             <h2>Random Pets</h2>
-            <div id="pet-gallery"></div>
-            <button id="load-more">Load More</button>
+            <div id="pet-gallery">
+                <p>No pets to display yet. Click "Load More" to see some pets!</p>
+            </div>
+            <button id="load-more" aria-label="Load more random pets">Load More</button>
         </section>
 
         <section id="search">
             <h2>Search by Breed</h2>
+            <label for="breed-search">Search for a Breed</label>
             <input type="text" id="breed-search" placeholder="Enter breed...">
-            <button id="search-button">Search</button>
-            <div id="search-results"></div>
+            <button id="search-button" aria-label="Search pets by breed">Search</button>
+            <div id="search-results">
+                <p>Search for a breed to see results.</p>
+            </div>
         </section>
 
-        <section id="favorites">
-            <h2>My Favorites</h2>
-            <div id="favorites-list"></div>
+        <section id="favorites" aria-labelledby="favorites-heading">
+            <h2 id="favorites-heading">My Favorites</h2>
+            <div id="favorites-list">
+                <p>No favorites yet. Add some by clicking "Add to Favorites"!</p>
+            </div>
         </section>
     </main>
-
+    <div id="loading" style="display: none;">Loading...</div>
     <script type="module" src="js/main.js"></script>
 </body>
 </html>
-`;
